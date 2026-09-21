@@ -634,7 +634,7 @@ function EvidenceMapInspector({
     if (hoveredNodeId && clickedHotspots[hoveredNodeId]) {
       return "public/sprites/search/blue_ticked.png";
     }
-    return "public/sprites/search/blue.png";
+    return "/sprites/search/blue.png";
   };
 
   return (
