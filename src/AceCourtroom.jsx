@@ -14,7 +14,7 @@ const selectSound = new Howl({
   volume: 0.4,
 });
 
-// Interactive skill nodes mapped to percentage coordinates on ./public/floor_plan.png
+// Interactive skill nodes mapped to percentage coordinates on .//floor_plan.png
 const mapNodes = [
   {
     id: "c",
@@ -210,7 +210,7 @@ const evidenceData = {
     {
       id: "badge",
       title: "Programmer's Badge",
-      image: "public/Evidence/badge.png",
+      image: "/Evidence/badge.png",
       description: "My prized programmer's badge. It proves my credentials as a dedicated software and full-stack developer.",
       details: "Certified: Full-Stack & Systems Development\nStack: React, Node.js, C, Python, Java",
       viewUrl: "https://github.com",
@@ -224,7 +224,7 @@ const evidenceData = {
       id: "floor_plan",
       title: "Skill Map",
       icon: "🗺️",
-      image: "public/Evidence/map.png",
+      image: "/Evidence/map.png",
       description: "Architectural blueprint mapping technical core competencies across low-level logic, backend systems, and frontend frameworks.",
       details: "Location: Courtroom Headquarters\nKey Areas: Low-Level, Game Logic, Web Stack, Databases",
       viewUrl: "https://github.com",
@@ -237,7 +237,7 @@ const evidenceData = {
     {
       id: "thinker",
       title: "Ace Portfolio",
-      image: "public/Evidence/badge.png",
+      image: "/Evidence/badge.png",
       description: "Interactive portfolio modeled after retro courtroom visual novels with custom dialogue engine.",
       details: "Engine: React + TypeIt + Howler.js\nDesign: Pixel-inspired UI",
       viewUrl: "https://github.com",
@@ -250,7 +250,7 @@ const evidenceData = {
       id: "research_paper",
       title: "Research Paper",
       icon: "📄",
-      image: "public/Evidence/paper.png",
+      image: "/Evidence/paper.png",
       description: "Comprehensive technical research documentation covering algorithms and advanced system design principles.",
       details: "Topic: Advanced Systems & Algorithmic Optimization\nStatus: Published & Verified",
       viewUrl: "https://github.com",
@@ -263,7 +263,7 @@ const evidenceData = {
       id: "undertale_game",
       title: "Undertale: Last Hope",
       icon: "⚔️",
-      image: "public/Evidence/badge.png",
+      image: "/Evidence/badge.png",
       description: "A fan-made sequel to Undertale Underdevelopment featuring custom battle mechanics and script logic.",
       details: "Project: Undertale: Last Hope\nEngine: Godot / Custom\nStatus: Active Development",
       viewUrl: "https://github.com",
@@ -276,10 +276,10 @@ const evidenceData = {
       id: "japanese_cert",
       title: "Japanese Proficiency Certificate",
       icon: "🇯🇵",
-      image: "public/Evidence/certificate.png",
+      image: "/Evidence/certificate.png",
       description: "Official certification recognizing structured language acquisition, vocabulary, kanji, and grammar study.",
       details: "Certification: JLPT N5 Certification\nFocus: Grammar, Kanji, Vocabulary, Basic Conversational Level",
-      viewUrl: "public/Files/JLPT N5 Certificate.pdf",
+      viewUrl: "/Files/JLPT N5 Certificate.pdf",
       dialogue: [
         "Examine this certification!",
         "Rigorous language study, kanji mastery, and structured grammar practice are fully accounted for here."
@@ -289,7 +289,7 @@ const evidenceData = {
       id: "cross_exam_doc",
       title: "Witness Testimony",
       icon: "⚖️",
-      image: "public/Evidence/testimony.png",
+      image: "/Evidence/testimony.png",
       description: "Official witness statement transcript. Click the CHECK button while selecting this item to begin Cross-Examination mode.",
       details: "Document ID: WIT-2026\nStatus: Ready for Cross-Examination",
       viewUrl: "https://github.com",
@@ -626,13 +626,13 @@ function EvidenceMapInspector({
   const getCustomSpriteSrc = () => {
     if (isMouseDown) {
       if (hoveredNodeId && clickedHotspots[hoveredNodeId]) {
-        return "public/sprites/search/yellow_ticked.png";
+        return "/sprites/search/yellow_ticked.png";
       }
-      return "public/sprites/search/yellow.png";
+      return "/sprites/search/yellow.png";
     }
 
     if (hoveredNodeId && clickedHotspots[hoveredNodeId]) {
-      return "public/sprites/search/blue_ticked.png";
+      return "/sprites/search/blue_ticked.png";
     }
     return "/sprites/search/blue.png";
   };
@@ -682,7 +682,7 @@ function EvidenceMapInspector({
             }`}
           >
             <img
-              src="public/floor_plan.png"
+              src="/floor_plan.png"
               alt="Technical Floor Plan Blueprint"
               className="w-full h-auto object-contain rounded select-none pointer-events-none"
             />
@@ -750,14 +750,14 @@ function EvidenceMapInspector({
                 className="p-1 hover:scale-110 active:scale-95 transition-transform cursor-pointer"
                 title="Previous Statement"
               >
-                <img src="public/sprites/select_arrow.png" alt="Previous" className="w-7 h-7 object-contain drop-shadow" />
+                <img src="/sprites/select_arrow.png" alt="Previous" className="w-7 h-7 object-contain drop-shadow" />
               </button>
               <button
                 onClick={handleNextStatement}
                 className="p-1 hover:scale-110 active:scale-95 transition-transform cursor-pointer"
                 title="Next Statement"
               >
-                <img src="public/sprites/select_arrow.png" alt="Next" className="w-7 h-7 object-contain drop-shadow scale-x-[-1]" />
+                <img src="/sprites/select_arrow.png" alt="Next" className="w-7 h-7 object-contain drop-shadow scale-x-[-1]" />
               </button>
             </div>
           </div>
@@ -834,7 +834,7 @@ function LawyerHiringForm({ onHoldIt, sectionRef }) {
         )}
         <div className="border-b-2 border-slate-800/20 pb-4 mb-6">
           <div className="flex items-center gap-2 text-xs font-mono tracking-widest text-amber-800 font-bold uppercase">
-            <img src="public/Evidence/badge.png" alt="Badge Icon" className="w-4 h-4 object-contain inline-block" />
+            <img src="/Evidence/badge.png" alt="Badge Icon" className="w-4 h-4 object-contain inline-block" />
             <span>DIRECT INQUIRY // GET IN TOUCH</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-black tracking-tight text-slate-900 uppercase mt-1">
@@ -1184,7 +1184,7 @@ export default function AceCourtroom() {
         <div className="fixed inset-0 w-screen h-screen z-[100] flex items-center justify-center pointer-events-none overflow-hidden">
           {!imgTakeThatError ? (
             <img
-              src="public/Interjections/take_that.png"
+              src="/Interjections/take_that.png"
               alt="TAKE THAT!"
               onError={() => setImgTakeThatError(true)}
               className="w-full h-full object-contain select-none animate-[courtShoutSharp_0.25s_steps(4,end)_forwards]"
@@ -1203,7 +1203,7 @@ export default function AceCourtroom() {
         <div className="fixed inset-0 w-screen h-screen z-[100] flex items-center justify-center pointer-events-none overflow-hidden">
           {!imgHoldItError ? (
             <img
-              src="public/Interjections/hold_it.png"
+              src="/Interjections/hold_it.png"
               alt="HOLD IT!"
               onError={() => setImgHoldItError(true)}
               className="w-full h-full object-contain select-none animate-[courtShoutSharp_0.25s_steps(4,end)_forwards]"
@@ -1222,7 +1222,7 @@ export default function AceCourtroom() {
         <div className="fixed inset-0 w-screen h-screen z-[100] flex items-center justify-center pointer-events-none overflow-hidden">
           {!imgObjectionError ? (
             <img
-              src="public/Interjections/objection.png"
+              src="/Interjections/objection.png"
               alt="OBJECTION!"
               onError={() => setImgObjectionError(true)}
               className="w-full h-full object-contain select-none animate-[courtShoutSharp_0.25s_steps(4,end)_forwards]"
@@ -1252,7 +1252,7 @@ export default function AceCourtroom() {
 
       <header className="w-full flex items-center justify-between border-b border-cyan-500/30 pb-4 z-20">
         <div className="flex items-center gap-2 font-black text-amber-400 tracking-wider text-base md:text-lg">
-          <img src="public/Evidence/badge.png" alt="Badge Logo" className="w-6 h-6 object-contain inline-block drop-shadow" />
+          <img src="/Evidence/badge.png" alt="Badge Logo" className="w-6 h-6 object-contain inline-block drop-shadow" />
           <span>DEFENSE</span>
         </div>
 
@@ -1340,12 +1340,12 @@ export default function AceCourtroom() {
       <LawyerHiringForm onHoldIt={handleHoldIt} sectionRef={hiringFormRef} />
 
       <div className={`fixed bottom-[140px] md:bottom-[160px] left-2 md:left-12 h-52 sm:h-64 md:h-80 lg:h-96 z-20 pointer-events-none flex items-end transition-opacity duration-300 ${showCharacter ? "opacity-100" : "opacity-0"}`}>
-        <img src="public/Sprites/character.png" alt="Phoenix Wright" className="h-full w-auto object-contain object-bottom drop-shadow-[0_12px_15px_rgba(0,0,0,0.8)]" />
+        <img src="/Sprites/character.png" alt="Phoenix Wright" className="h-full w-auto object-contain object-bottom drop-shadow-[0_12px_15px_rgba(0,0,0,0.8)]" />
       </div>
 
       <div className={`fixed bottom-[140px] md:bottom-[160px] right-2 md:right-12 h-52 sm:h-64 md:h-80 lg:h-96 z-20 pointer-events-none flex items-end transition-opacity duration-300 ${isCrossExamActive && isCrossExamInView ? "opacity-100" : "opacity-0"}`}>
         <img 
-          src={imgRightCharError ? "public/Sprites/character.png" : "public/Sprites/character_right.png"} 
+          src={imgRightCharError ? "/Sprites/character.png" : "/Sprites/character_right.png"} 
           alt="Xine Ohp" 
           onError={() => setImgRightCharError(true)}
           className="h-full w-auto object-contain object-bottom drop-shadow-[0_12px_15px_rgba(0,0,0,0.8)] -scale-x-100"
@@ -1424,7 +1424,7 @@ export default function AceCourtroom() {
                 className="p-1 hover:scale-110 active:scale-95 transition-transform cursor-pointer animate-[fadeIn_0.2s_ease-in-out]"
                 title="Next Line"
               >
-                <img src="public/sprites/select_arrow.png" alt="Next Arrow" className="w-8 h-8 object-contain drop-shadow scale-x-[-1] animate-pulse" />
+                <img src="/sprites/select_arrow.png" alt="Next Arrow" className="w-8 h-8 object-contain drop-shadow scale-x-[-1] animate-pulse" />
               </button>
             )}
           </div>
